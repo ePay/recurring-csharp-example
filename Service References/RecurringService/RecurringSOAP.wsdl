@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="EPay.API.Recurring" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" targetNamespace="EPay.API.Recurring" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="EPay.API.Recurring/Imports">
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd0" namespace="EPay.API.Recurring" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd2" namespace="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" namespace="EPay.API.Recurring.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd4" namespace="EPay.API" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd5" namespace="EPay.API.Recurring.RecurringPlan" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd6" namespace="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd8" namespace="EPay.API.Recurring.Subscriber.SignUpSubscriber.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd9" namespace="EPay.API.Recurring.Subscriber" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd10" namespace="EPay.API.Recurring.Subscriber.SignUpSubscriber.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd11" namespace="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd12" namespace="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd13" namespace="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd14" namespace="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd15" namespace="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd16" namespace="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd17" namespace="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd18" namespace="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd19" namespace="EPay.API.Currency" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd20" namespace="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd21" namespace="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd22" namespace="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd23" namespace="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd24" namespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd25" namespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd26" namespace="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd28" namespace="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd29" namespace="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd30" namespace="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd31" namespace="EPay.API.Recurring.Subscriber.ListSubscriber.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd32" namespace="EPay.API.Recurring.Subscriber.ListSubscriber.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd33" namespace="EPay.API.Recurring.Subscriber.UpdateSubscriber.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd34" namespace="EPay.API.Recurring.Subscriber.UpdateSubscriber.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd35" namespace="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd36" namespace="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd37" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd38" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd39" namespace="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd40" namespace="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd41" namespace="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd42" namespace="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd43" namespace="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd44" namespace="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd45" namespace="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd46" namespace="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd47" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd48" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd49" namespace="EPay.API.Recurring.Subscriber.GetSubscriber.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd50" namespace="EPay.API.Recurring.Subscriber.GetSubscriber.Response" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd51" namespace="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Request" />
+      <xsd:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd52" namespace="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Response" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IRecurring_createrecurringplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:createrecurringplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_createrecurringplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:createrecurringplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_signupsubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:signupsubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_signupsubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:signupsubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_prevalidatesignupsubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:prevalidatesignupsubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_prevalidatesignupsubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:prevalidatesignupsubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_deleterecurringplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:deleterecurringplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_deleterecurringplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deleterecurringplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_addrecurringplantosubscription_InputMessage">
+    <wsdl:part name="parameters" element="tns:addrecurringplantosubscription" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_addrecurringplantosubscription_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addrecurringplantosubscriptionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_deletesubscriptionplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:deletesubscriptionplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_deletesubscriptionplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:deletesubscriptionplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listsubscriptionplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:listsubscriptionplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listsubscriptionplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listsubscriptionplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getsubscriptionplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:getsubscriptionplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getsubscriptionplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getsubscriptionplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringpayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringpayment" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringpayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringpaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringpaymentlog_InputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringpaymentlog" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrecurringpaymentlog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listrecurringpaymentlogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listsubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:listsubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listsubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listsubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updatesubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatesubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updatesubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatesubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updatesubscriptionplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:updatesubscriptionplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updatesubscriptionplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updatesubscriptionplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringpayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringpayment" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringpayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringpaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updaterecurringpayment_InputMessage">
+    <wsdl:part name="parameters" element="tns:updaterecurringpayment" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updaterecurringpayment_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updaterecurringpaymentResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updaterecurringplan_InputMessage">
+    <wsdl:part name="parameters" element="tns:updaterecurringplan" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_updaterecurringplan_OutputMessage">
+    <wsdl:part name="parameters" element="tns:updaterecurringplanResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrequestresponselog_InputMessage">
+    <wsdl:part name="parameters" element="tns:listrequestresponselog" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_listrequestresponselog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:listrequestresponselogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrequestresponselog_InputMessage">
+    <wsdl:part name="parameters" element="tns:getrequestresponselog" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrequestresponselog_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrequestresponselogResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringpaymentstats_InputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringpaymentstats" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getrecurringpaymentstats_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getrecurringpaymentstatsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getsubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:getsubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_getsubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getsubscriberResponse" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_reactivatesuspendedsubscriber_InputMessage">
+    <wsdl:part name="parameters" element="tns:reactivatesuspendedsubscriber" />
+  </wsdl:message>
+  <wsdl:message name="IRecurring_reactivatesuspendedsubscriber_OutputMessage">
+    <wsdl:part name="parameters" element="tns:reactivatesuspendedsubscriberResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IRecurring">
+    <wsdl:operation name="createrecurringplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/createrecurringplan" message="tns:IRecurring_createrecurringplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/createrecurringplanResponse" message="tns:IRecurring_createrecurringplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="signupsubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/signupsubscriber" message="tns:IRecurring_signupsubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/signupsubscriberResponse" message="tns:IRecurring_signupsubscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="prevalidatesignupsubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/prevalidatesignupsubscriber" message="tns:IRecurring_prevalidatesignupsubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/prevalidatesignupsubscriberResponse" message="tns:IRecurring_prevalidatesignupsubscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deleterecurringplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/deleterecurringplan" message="tns:IRecurring_deleterecurringplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/deleterecurringplanResponse" message="tns:IRecurring_deleterecurringplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addrecurringplantosubscription">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/addrecurringplantosubscription" message="tns:IRecurring_addrecurringplantosubscription_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/addrecurringplantosubscriptionResponse" message="tns:IRecurring_addrecurringplantosubscription_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="deletesubscriptionplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/deletesubscriptionplan" message="tns:IRecurring_deletesubscriptionplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/deletesubscriptionplanResponse" message="tns:IRecurring_deletesubscriptionplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listrecurringplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringplan" message="tns:IRecurring_listrecurringplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringplanResponse" message="tns:IRecurring_listrecurringplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getrecurringplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringplan" message="tns:IRecurring_getrecurringplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringplanResponse" message="tns:IRecurring_getrecurringplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listsubscriptionplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listsubscriptionplan" message="tns:IRecurring_listsubscriptionplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listsubscriptionplanResponse" message="tns:IRecurring_listsubscriptionplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getsubscriptionplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getsubscriptionplan" message="tns:IRecurring_getsubscriptionplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getsubscriptionplanResponse" message="tns:IRecurring_getsubscriptionplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listrecurringpayment">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringpayment" message="tns:IRecurring_listrecurringpayment_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringpaymentResponse" message="tns:IRecurring_listrecurringpayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listrecurringpaymentlog">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringpaymentlog" message="tns:IRecurring_listrecurringpaymentlog_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listrecurringpaymentlogResponse" message="tns:IRecurring_listrecurringpaymentlog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listsubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listsubscriber" message="tns:IRecurring_listsubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listsubscriberResponse" message="tns:IRecurring_listsubscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatesubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/updatesubscriber" message="tns:IRecurring_updatesubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/updatesubscriberResponse" message="tns:IRecurring_updatesubscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updatesubscriptionplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/updatesubscriptionplan" message="tns:IRecurring_updatesubscriptionplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/updatesubscriptionplanResponse" message="tns:IRecurring_updatesubscriptionplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getrecurringpayment">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringpayment" message="tns:IRecurring_getrecurringpayment_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringpaymentResponse" message="tns:IRecurring_getrecurringpayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updaterecurringpayment">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/updaterecurringpayment" message="tns:IRecurring_updaterecurringpayment_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/updaterecurringpaymentResponse" message="tns:IRecurring_updaterecurringpayment_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="updaterecurringplan">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/updaterecurringplan" message="tns:IRecurring_updaterecurringplan_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/updaterecurringplanResponse" message="tns:IRecurring_updaterecurringplan_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="listrequestresponselog">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/listrequestresponselog" message="tns:IRecurring_listrequestresponselog_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/listrequestresponselogResponse" message="tns:IRecurring_listrequestresponselog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getrequestresponselog">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getrequestresponselog" message="tns:IRecurring_getrequestresponselog_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getrequestresponselogResponse" message="tns:IRecurring_getrequestresponselog_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getrecurringpaymentstats">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringpaymentstats" message="tns:IRecurring_getrecurringpaymentstats_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getrecurringpaymentstatsResponse" message="tns:IRecurring_getrecurringpaymentstats_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getsubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/getsubscriber" message="tns:IRecurring_getsubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/getsubscriberResponse" message="tns:IRecurring_getsubscriber_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="reactivatesuspendedsubscriber">
+      <wsdl:input wsaw:Action="EPay.API.Recurring/IRecurring/reactivatesuspendedsubscriber" message="tns:IRecurring_reactivatesuspendedsubscriber_InputMessage" />
+      <wsdl:output wsaw:Action="EPay.API.Recurring/IRecurring/reactivatesuspendedsubscriberResponse" message="tns:IRecurring_reactivatesuspendedsubscriber_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+</wsdl:definitions>

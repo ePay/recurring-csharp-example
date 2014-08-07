@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Request" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" namespace="EPay.API.Recurring.Request" />
+  <xs:complexType name="getrecurringpaymentrequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Request" base="q1:request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getrecurringpaymentrequest" nillable="true" type="tns:getrecurringpaymentrequest" />
+  <xs:complexType name="recurringpayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recurringpaymentid" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+</xs:schema>

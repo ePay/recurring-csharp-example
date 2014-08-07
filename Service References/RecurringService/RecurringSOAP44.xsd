@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd19" namespace="EPay.API.Currency" />
+  <xs:complexType name="getsubscriptionplanresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getsubscriptionplanresponse" nillable="true" type="tns:getsubscriptionplanresponse" />
+  <xs:complexType name="subscriptionplan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="created" type="xs:dateTime" />
+      <xs:element xmlns:q2="EPay.API.Currency" minOccurs="0" name="currency" nillable="true" type="q2:currency" />
+      <xs:element minOccurs="0" name="merchantnumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="numberofcompletedpayments" type="xs:short" />
+      <xs:element minOccurs="0" name="recurringperiodprice" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="recurringplanid" type="xs:int" />
+      <xs:element minOccurs="0" name="status" type="xs:int" />
+      <xs:element minOccurs="0" name="subscriptionid" type="xs:long" />
+      <xs:element minOccurs="0" name="subscriptionplanid" type="xs:int" />
+      <xs:element minOccurs="0" name="trialperiodprice" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+</xs:schema>

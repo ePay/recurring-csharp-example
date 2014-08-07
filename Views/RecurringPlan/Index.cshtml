@@ -1,0 +1,31 @@
+﻿@model RecurringServiceExample.RecurringService.listrecurringplanresponse
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="page-header">
+    <h1>Recurring plan <small>List</small></h1>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Created</th>
+            <th>Currency</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model.recurringplanlist)
+        {
+        <tr>
+            <td>@item.recurringplanid</td>
+            <td>@item.created</td>
+            <td>@item.currency.code</td>
+            <td>@(item.status == 0 ? "Deleted" : "Active")</td>
+        </tr>
+        }
+    </tbody>
+</table>

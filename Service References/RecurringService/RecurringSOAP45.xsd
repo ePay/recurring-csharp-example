@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Currency" elementFormDefault="qualified" targetNamespace="EPay.API.Currency" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="currency">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="code" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="number" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="currency" nillable="true" type="tns:currency" />
+</xs:schema>

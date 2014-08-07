@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:complexType name="addrecurringplantosubscriptionresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="recurringplan" nillable="true" type="tns:recurringplan" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="addrecurringplantosubscriptionresponse" nillable="true" type="tns:addrecurringplantosubscriptionresponse" />
+  <xs:complexType name="recurringplan">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:element name="recurringplan" nillable="true" type="tns:recurringplan" />
+</xs:schema>

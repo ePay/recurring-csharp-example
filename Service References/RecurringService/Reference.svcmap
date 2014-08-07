@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d0d31efc-dbc6-4a84-b578-0594ca9206c7" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>false</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="https://recurring.api.epay.eu/v1/RecurringSOAP.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="RecurringSOAP.xsd" MetadataType="Schema" ID="38618e46-eea7-424c-838f-1f8ee7ae7289" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd36" />
+    <MetadataFile FileName="RecurringSOAP1.xsd" MetadataType="Schema" ID="2ac3e529-dfaf-4f2a-ad68-15a49b3db185" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd34" />
+    <MetadataFile FileName="Recurring.wsdl" MetadataType="Wsdl" ID="03b19ed3-2b76-40e5-87a3-9d2c26070e3b" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?wsdl" />
+    <MetadataFile FileName="RecurringSOAP2.xsd" MetadataType="Schema" ID="2ed0678a-ed71-4998-8ced-80a90bfc7468" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd51" />
+    <MetadataFile FileName="RecurringSOAP3.xsd" MetadataType="Schema" ID="9ad253db-33e2-4ebb-aef1-c16fde85562b" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd44" />
+    <MetadataFile FileName="RecurringSOAP4.xsd" MetadataType="Schema" ID="d6c06acf-ee98-4f4c-b05d-b8276fd720a4" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd30" />
+    <MetadataFile FileName="RecurringSOAP5.xsd" MetadataType="Schema" ID="9c9a4227-8b27-4a97-b290-453b6d882387" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd17" />
+    <MetadataFile FileName="RecurringSOAP6.xsd" MetadataType="Schema" ID="f3b90e36-79c6-4768-9a9a-973c3faba535" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd40" />
+    <MetadataFile FileName="RecurringSOAP7.xsd" MetadataType="Schema" ID="2d3d430a-1b24-4e88-831b-d773d24c8faf" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" />
+    <MetadataFile FileName="RecurringSOAP8.xsd" MetadataType="Schema" ID="ef8ed76d-4137-4439-be44-38beb00aec29" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd50" />
+    <MetadataFile FileName="RecurringSOAP9.xsd" MetadataType="Schema" ID="0ebccbb0-1282-4a40-8d39-1146795942de" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd8" />
+    <MetadataFile FileName="RecurringSOAP10.xsd" MetadataType="Schema" ID="a1f0e479-190e-4db3-b702-7f0cacb20097" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd9" />
+    <MetadataFile FileName="RecurringSOAP11.xsd" MetadataType="Schema" ID="4b459e3a-3a98-446d-ae84-62f684495066" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd35" />
+    <MetadataFile FileName="RecurringSOAP12.xsd" MetadataType="Schema" ID="7aff38a1-482d-469c-88f5-3871f35873d2" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd21" />
+    <MetadataFile FileName="RecurringSOAP13.xsd" MetadataType="Schema" ID="a99e80c0-e301-4e0e-9263-9923cdde30e4" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd31" />
+    <MetadataFile FileName="RecurringSOAP14.xsd" MetadataType="Schema" ID="20c0451e-656c-41e8-a6ec-fb1c62a66f2b" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd10" />
+    <MetadataFile FileName="RecurringSOAP15.xsd" MetadataType="Schema" ID="d311fe35-d888-44bc-aa72-07269be619d2" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd4" />
+    <MetadataFile FileName="RecurringSOAP16.xsd" MetadataType="Schema" ID="1016f3ed-02c8-4422-b697-6104a00a4352" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd20" />
+    <MetadataFile FileName="RecurringSOAP17.xsd" MetadataType="Schema" ID="880cdafc-4333-40df-bbcf-b44e05fef75f" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd5" />
+    <MetadataFile FileName="RecurringSOAP18.xsd" MetadataType="Schema" ID="078be351-f349-45e9-9e9e-123cf86c2ed2" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd6" />
+    <MetadataFile FileName="RecurringSOAP.wsdl" MetadataType="Wsdl" ID="6fdae310-fdcd-43fb-9e6b-24bcdd3bcea1" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?wsdl=wsdl0" />
+    <MetadataFile FileName="RecurringSOAP19.xsd" MetadataType="Schema" ID="73f20e4a-0135-4a13-abc8-5ef9ef5c7a6d" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" />
+    <MetadataFile FileName="RecurringSOAP20.xsd" MetadataType="Schema" ID="46d04474-a103-4525-8ae4-bf626314e150" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd48" />
+    <MetadataFile FileName="RecurringSOAP21.xsd" MetadataType="Schema" ID="1fd2ed23-06ee-4399-97ac-14dbf038183f" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" />
+    <MetadataFile FileName="RecurringSOAP22.xsd" MetadataType="Schema" ID="30f4dad7-6c9b-4df6-a270-9513ea5afb4c" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd22" />
+    <MetadataFile FileName="RecurringSOAP23.xsd" MetadataType="Schema" ID="37b250c9-0655-4419-8efa-62b0b78a6078" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd32" />
+    <MetadataFile FileName="RecurringSOAP24.xsd" MetadataType="Schema" ID="c8e7e7f5-304f-4d40-8c78-5213eb45217e" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd11" />
+    <MetadataFile FileName="RecurringSOAP25.xsd" MetadataType="Schema" ID="0d775fda-0bbe-48f3-8bdc-656f6b56c1bb" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd42" />
+    <MetadataFile FileName="RecurringSOAP26.xsd" MetadataType="Schema" ID="470c00f2-8e28-4242-bfd6-5d7bec01d384" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd2" />
+    <MetadataFile FileName="RecurringSOAP27.xsd" MetadataType="Schema" ID="cab0b4a9-3daa-4016-85b4-08606385ec30" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd45" />
+    <MetadataFile FileName="RecurringSOAP28.xsd" MetadataType="Schema" ID="d2806082-398a-496b-98ee-2fa8a5ed45ff" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd14" />
+    <MetadataFile FileName="RecurringSOAP29.xsd" MetadataType="Schema" ID="b52eda31-d8ab-4dee-8f69-761feaef48de" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd1" />
+    <MetadataFile FileName="RecurringSOAP30.xsd" MetadataType="Schema" ID="b6e3588a-7246-4305-81f5-7ed66040ff41" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd24" />
+    <MetadataFile FileName="RecurringSOAP31.xsd" MetadataType="Schema" ID="a63d80f6-5ddf-4e9b-bc1e-1729be8421c5" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd39" />
+    <MetadataFile FileName="RecurringSOAP32.xsd" MetadataType="Schema" ID="eabac927-d5c5-4cb3-b34d-aa0c3b9a7850" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd18" />
+    <MetadataFile FileName="RecurringSOAP33.xsd" MetadataType="Schema" ID="57d3ae4e-bc74-4663-ad4d-af16d652ef75" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd49" />
+    <MetadataFile FileName="RecurringSOAP34.xsd" MetadataType="Schema" ID="fdbc9abb-4887-4bec-bd19-5631b206ac52" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd28" />
+    <MetadataFile FileName="RecurringSOAP.disco" MetadataType="Disco" ID="86f6a8a2-810d-4d25-b608-708f0feec969" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?disco" />
+    <MetadataFile FileName="RecurringSOAP35.xsd" MetadataType="Schema" ID="b9eea497-53e1-4758-9344-f70eada0ecad" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd38" />
+    <MetadataFile FileName="RecurringSOAP36.xsd" MetadataType="Schema" ID="14f77edb-90d4-41a8-b216-6b393f840c7a" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd52" />
+    <MetadataFile FileName="RecurringSOAP37.xsd" MetadataType="Schema" ID="d143326f-716c-4f17-9f8b-48dba9788652" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd23" />
+    <MetadataFile FileName="RecurringSOAP38.xsd" MetadataType="Schema" ID="fe68c199-02f2-4f8c-aef8-604351d380aa" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd33" />
+    <MetadataFile FileName="RecurringSOAP39.xsd" MetadataType="Schema" ID="e51d4683-6ea9-4055-9b3a-7dbd459c86a6" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd12" />
+    <MetadataFile FileName="RecurringSOAP40.xsd" MetadataType="Schema" ID="cb8da25a-c9da-41f4-88fa-76dccff2d4c0" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd43" />
+    <MetadataFile FileName="RecurringSOAP41.xsd" MetadataType="Schema" ID="7780309f-bd89-4ab5-a9a0-47afffbbf23b" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd0" />
+    <MetadataFile FileName="RecurringSOAP42.xsd" MetadataType="Schema" ID="54bd2d7e-82c2-4c2f-b30a-03efba5c51ba" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd15" />
+    <MetadataFile FileName="RecurringSOAP43.xsd" MetadataType="Schema" ID="22005a0e-14e9-4619-a58a-798d767da645" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd46" />
+    <MetadataFile FileName="RecurringSOAP44.xsd" MetadataType="Schema" ID="d35fa988-a4dc-41ae-b1c2-bf99b2409ce7" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd25" />
+    <MetadataFile FileName="RecurringSOAP45.xsd" MetadataType="Schema" ID="9bf411a8-ec6b-4be6-8798-40716c0015e3" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd19" />
+    <MetadataFile FileName="RecurringSOAP46.xsd" MetadataType="Schema" ID="2fb585c8-76f9-4ce1-b86c-63760466a166" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd29" />
+    <MetadataFile FileName="RecurringSOAP47.xsd" MetadataType="Schema" ID="a8ce7eca-c873-4da4-a45f-c6758259c4e7" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd41" />
+    <MetadataFile FileName="RecurringSOAP48.xsd" MetadataType="Schema" ID="e04ecbe1-78b4-44e6-abb1-178dc7c3eb76" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd13" />
+    <MetadataFile FileName="RecurringSOAP49.xsd" MetadataType="Schema" ID="11affcff-dc7e-4023-81ac-1b96ba333fc2" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd37" />
+    <MetadataFile FileName="RecurringSOAP50.xsd" MetadataType="Schema" ID="b3bab3fd-335f-42bf-9ef5-f0253f6602cb" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd16" />
+    <MetadataFile FileName="RecurringSOAP51.xsd" MetadataType="Schema" ID="219c9d53-3b6b-4d4b-87c9-1fcd4e8a5e34" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd47" />
+    <MetadataFile FileName="RecurringSOAP52.xsd" MetadataType="Schema" ID="792acb03-5290-409e-a4d7-8091504a225e" SourceId="1" SourceUrl="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd26" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

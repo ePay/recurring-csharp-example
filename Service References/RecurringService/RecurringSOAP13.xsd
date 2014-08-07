@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.Subscriber.ListSubscriber.Request" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.Subscriber.ListSubscriber.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" namespace="EPay.API.Recurring.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd9" namespace="EPay.API.Recurring.Subscriber" />
+  <xs:complexType name="listsubscriberrequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Request" base="q1:request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="paging" nillable="true" type="q1:paging" />
+          <xs:element minOccurs="0" name="sorting" type="tns:sorting" />
+          <xs:element minOccurs="0" name="subscriber" nillable="true" type="tns:subscriber" />
+          <xs:element minOccurs="0" name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="listsubscriberrequest" nillable="true" type="tns:listsubscriberrequest" />
+  <xs:simpleType name="sorting">
+    <xs:list>
+      <xs:simpleType>
+        <xs:restriction base="xs:string">
+          <xs:enumeration value="createdascending">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">0</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="createddescending">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="lateststatusascending">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+          <xs:enumeration value="lateststatusdescending">
+            <xs:annotation>
+              <xs:appinfo>
+                <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+              </xs:appinfo>
+            </xs:annotation>
+          </xs:enumeration>
+        </xs:restriction>
+      </xs:simpleType>
+    </xs:list>
+  </xs:simpleType>
+  <xs:element name="sorting" nillable="true" type="tns:sorting" />
+  <xs:complexType name="subscriber">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="EPay.API.Recurring.Subscriber" base="q2:subscriber">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="createdfrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="createdto" nillable="true" type="xs:dateTime" />
+          <xs:element xmlns:q3="EPay.API.Recurring.RecurringPayment" minOccurs="0" name="latestpaymentstatus" nillable="true" type="q3:paymentstatus" />
+          <xs:element minOccurs="0" name="latestpaymentstatusupdatedfrom" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="latestpaymentstatusupdatedto" nillable="true" type="xs:dateTime" />
+          <xs:element minOccurs="0" name="subscriptionid" nillable="true" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="subscriber" nillable="true" type="tns:subscriber" />
+  <xs:complexType name="subscriptionplan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="recurringplanid" nillable="true" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+</xs:schema>

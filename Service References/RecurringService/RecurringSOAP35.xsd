@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd19" namespace="EPay.API.Currency" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+  <xs:complexType name="getrecurringpaymentresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getrecurringpaymentresponse" nillable="true" type="tns:getrecurringpaymentresponse" />
+  <xs:complexType name="recurringpayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:int" />
+      <xs:element minOccurs="0" name="authcompleted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="capturecompleted" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="created" type="xs:dateTime" />
+      <xs:element xmlns:q2="EPay.API.Currency" minOccurs="0" name="currency" nillable="true" type="q2:currency" />
+      <xs:element minOccurs="0" name="fee" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="latestauthattempt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="lockedforprocessing" nillable="true" type="xs:dateTime" />
+      <xs:element xmlns:q3="EPay.API.Recurring.Response" minOccurs="0" name="merchantnumber" nillable="true" type="q3:merchantnumber" />
+      <xs:element minOccurs="0" name="nextauthattempt" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="numberofauthattempts" type="xs:int" />
+      <xs:element minOccurs="0" name="orderid" nillable="true" type="xs:int" />
+      <xs:element xmlns:q4="EPay.API.Recurring.RecurringPayment" minOccurs="0" name="paymentstatus" type="q4:paymentstatus" />
+      <xs:element minOccurs="0" name="recurringpaymentid" type="xs:long" />
+      <xs:element minOccurs="0" name="recurringplanid" type="xs:int" />
+      <xs:element minOccurs="0" name="scheduledauth" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="scheduledcapture" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="subscriptionid" type="xs:long" />
+      <xs:element minOccurs="0" name="subscriptionplanid" type="xs:int" />
+      <xs:element minOccurs="0" name="totalamount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="transactionid" nillable="true" type="xs:long" />
+      <xs:element minOccurs="0" name="trialperiodpayment" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+</xs:schema>

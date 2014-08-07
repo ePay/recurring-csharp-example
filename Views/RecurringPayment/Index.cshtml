@@ -1,0 +1,37 @@
+﻿@model RecurringServiceExample.RecurringService.recurringpaymentlist
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="page-header">
+    <h1>Recurring payment <small>List</small></h1>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Created</th>
+            <th>Currency</th>
+            <th>Status</th>
+            <th>Fee</th>
+            <th>Amount</th>
+            <th>Total amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.recurringpaymentid</td>
+                <td>@item.created</td>
+                <td>@item.currency.code</td>
+                <td>@item.paymentstatus</td>
+                <td>@item.fee</td>
+                <td>@item.amount</td>
+                <td>@item.totalamount</td>
+            </tr>
+        }
+    </tbody>
+</table>

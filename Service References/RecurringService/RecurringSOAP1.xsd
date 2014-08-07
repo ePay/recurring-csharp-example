@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.Subscriber.UpdateSubscriber.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.Subscriber.UpdateSubscriber.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:complexType name="updatesubscriberresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="updatesubscriberresponse" nillable="true" type="tns:updatesubscriberresponse" />
+</xs:schema>

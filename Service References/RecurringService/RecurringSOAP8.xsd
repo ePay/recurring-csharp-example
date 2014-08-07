@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.Subscriber.GetSubscriber.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.Subscriber.GetSubscriber.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd9" namespace="EPay.API.Recurring.Subscriber" />
+  <xs:complexType name="getsubscriberresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="subscriber" nillable="true" type="tns:subscriber" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getsubscriberresponse" nillable="true" type="tns:getsubscriberresponse" />
+  <xs:complexType name="subscriber">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q2="EPay.API.Recurring.Subscriber" base="q2:subscriber">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="cardexpiremonth" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="cardexpireyear" type="xs:unsignedByte" />
+          <xs:element minOccurs="0" name="created" type="xs:dateTime" />
+          <xs:element xmlns:q3="EPay.API.Recurring.RecurringPayment" minOccurs="0" name="latestpaymentstatus" type="q3:paymentstatus" />
+          <xs:element minOccurs="0" name="latestpaymentstatusupdated" type="xs:dateTime" />
+          <xs:element xmlns:q4="EPay.API.Recurring.Response" minOccurs="0" name="merchantnumber" nillable="true" type="q4:merchantnumber" />
+          <xs:element minOccurs="0" name="subscriptionid" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="subscriber" nillable="true" type="tns:subscriber" />
+</xs:schema>

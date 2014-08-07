@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd2" namespace="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd6" namespace="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd8" namespace="EPay.API.Recurring.Subscriber.SignUpSubscriber.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd10" namespace="EPay.API.Recurring.Subscriber.SignUpSubscriber.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd11" namespace="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd12" namespace="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd13" namespace="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd14" namespace="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd15" namespace="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd16" namespace="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd17" namespace="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd18" namespace="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd20" namespace="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd21" namespace="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd22" namespace="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd23" namespace="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd24" namespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd25" namespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd26" namespace="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd28" namespace="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd29" namespace="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd30" namespace="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd31" namespace="EPay.API.Recurring.Subscriber.ListSubscriber.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd32" namespace="EPay.API.Recurring.Subscriber.ListSubscriber.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd33" namespace="EPay.API.Recurring.Subscriber.UpdateSubscriber.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd34" namespace="EPay.API.Recurring.Subscriber.UpdateSubscriber.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd35" namespace="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd36" namespace="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd37" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd38" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd39" namespace="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd40" namespace="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd41" namespace="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd42" namespace="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd43" namespace="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd44" namespace="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd45" namespace="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd46" namespace="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd47" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd48" namespace="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd49" namespace="EPay.API.Recurring.Subscriber.GetSubscriber.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd50" namespace="EPay.API.Recurring.Subscriber.GetSubscriber.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd51" namespace="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Request" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd52" namespace="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Response" />
+  <xs:element name="createrecurringplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Request" minOccurs="0" name="createrecurringplanrequest" nillable="true" type="q1:createrecurringplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="createrecurringplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="EPay.API.Recurring.RecurringPlan.CreateRecurringPlan.Response" minOccurs="0" name="createrecurringplanResult" nillable="true" type="q2:createrecurringplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signupsubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q3="EPay.API.Recurring.Subscriber.SignUpSubscriber.Request" minOccurs="0" name="signupsubscriberrequest" nillable="true" type="q3:signupsubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="signupsubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="EPay.API.Recurring.Subscriber.SignUpSubscriber.Response" minOccurs="0" name="signupsubscriberResult" nillable="true" type="q4:signupsubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prevalidatesignupsubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="EPay.API.Recurring.Subscriber.SignUpSubscriber.Request" minOccurs="0" name="signupsubscriberrequest" nillable="true" type="q5:signupsubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="prevalidatesignupsubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q6="EPay.API.Recurring.Subscriber.SignUpSubscriber.Response" minOccurs="0" name="prevalidatesignupsubscriberResult" nillable="true" type="q6:signupsubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleterecurringplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Request" minOccurs="0" name="deleterecurringplanrequest" nillable="true" type="q7:deleterecurringplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deleterecurringplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="EPay.API.Recurring.RecurringPlan.DeleteRecurringPlan.Response" minOccurs="0" name="deleterecurringplanResult" nillable="true" type="q8:deleterecurringplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addrecurringplantosubscription">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Request" minOccurs="0" name="addrecurringplantosubscriptionrequest" nillable="true" type="q9:addrecurringplantosubscriptionrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="addrecurringplantosubscriptionResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="EPay.API.Recurring.RecurringPlan.AddRecurringPlanToSubscription.Response" minOccurs="0" name="addrecurringplantosubscriptionResult" nillable="true" type="q10:addrecurringplantosubscriptionresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletesubscriptionplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Request" minOccurs="0" name="deletesubscriptionplanrequest" nillable="true" type="q11:deletesubscriptionplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="deletesubscriptionplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="EPay.API.Recurring.SubscriptionPlan.DeleteSubscriptionPlan.Response" minOccurs="0" name="deletesubscriptionplanResult" nillable="true" type="q12:deletesubscriptionplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Request" minOccurs="0" name="listrecurringplanrequest" nillable="true" type="q13:listrecurringplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q14="EPay.API.Recurring.RecurringPlan.ListRecurringPlan.Response" minOccurs="0" name="listrecurringplanResult" nillable="true" type="q14:listrecurringplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q15="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Request" minOccurs="0" name="getrecurringplanrequest" nillable="true" type="q15:getrecurringplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q16="EPay.API.Recurring.RecurringPlan.GetRecurringPlan.Response" minOccurs="0" name="getrecurringplanResult" nillable="true" type="q16:getrecurringplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listsubscriptionplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q17="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Request" minOccurs="0" name="listsubscriptionplanrequest" nillable="true" type="q17:listsubscriptionplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listsubscriptionplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q18="EPay.API.Recurring.SubscriptionPlan.ListSubscriptionPlan.Response" minOccurs="0" name="listsubscriptionplanResult" nillable="true" type="q18:listsubscriptionplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getsubscriptionplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q19="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Request" minOccurs="0" name="getsubscriptionplanrequest" nillable="true" type="q19:getsubscriptionplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getsubscriptionplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q20="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Response" minOccurs="0" name="getsubscriptionplanResult" nillable="true" type="q20:getsubscriptionplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringpayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q21="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Request" minOccurs="0" name="listrecurringpaymentrequest" nillable="true" type="q21:listrecurringpaymentrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringpaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q22="EPay.API.Recurring.RecurringPayment.ListRecurringPayment.Response" minOccurs="0" name="listrecurringpaymentResult" nillable="true" type="q22:listrecurringpaymentresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringpaymentlog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q23="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Request" minOccurs="0" name="listrecurringpaymentlogrequest" nillable="true" type="q23:listrecurringpaymentlogrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrecurringpaymentlogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q24="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Response" minOccurs="0" name="listrecurringpaymentlogResult" nillable="true" type="q24:listrecurringpaymentlogresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listsubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q25="EPay.API.Recurring.Subscriber.ListSubscriber.Request" minOccurs="0" name="listsubscriberrequest" nillable="true" type="q25:listsubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listsubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q26="EPay.API.Recurring.Subscriber.ListSubscriber.Response" minOccurs="0" name="listsubscriberResult" nillable="true" type="q26:listsubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q27="EPay.API.Recurring.Subscriber.UpdateSubscriber.Request" minOccurs="0" name="updatesubscriberrequest" nillable="true" type="q27:updatesubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q28="EPay.API.Recurring.Subscriber.UpdateSubscriber.Response" minOccurs="0" name="updatesubscriberResult" nillable="true" type="q28:updatesubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesubscriptionplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q29="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Request" minOccurs="0" name="updatesubscriptionplanrequest" nillable="true" type="q29:updatesubscriptionplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updatesubscriptionplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q30="EPay.API.Recurring.SubscriptionPlan.UpdateSubscriptionPlan.Response" minOccurs="0" name="updatesubscriptionplanResult" nillable="true" type="q30:updatesubscriptionplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringpayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q31="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Request" minOccurs="0" name="getrecurringpaymentrequest" nillable="true" type="q31:getrecurringpaymentrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringpaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q32="EPay.API.Recurring.RecurringPayment.GetRecurringPayment.Response" minOccurs="0" name="getrecurringpaymentResult" nillable="true" type="q32:getrecurringpaymentresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updaterecurringpayment">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q33="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Request" minOccurs="0" name="updaterecurringpaymentrequest" nillable="true" type="q33:updaterecurringpaymentrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updaterecurringpaymentResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q34="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Response" minOccurs="0" name="updaterecurringpaymentResult" nillable="true" type="q34:updaterecurringpaymentresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updaterecurringplan">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q35="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Request" minOccurs="0" name="updaterecurringplanrequest" nillable="true" type="q35:updaterecurringplanrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="updaterecurringplanResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q36="EPay.API.Recurring.RecurringPlan.UpdateRecurringPlan.Response" minOccurs="0" name="updaterecurringplanResult" nillable="true" type="q36:updaterecurringplanresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrequestresponselog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q37="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Request" minOccurs="0" name="listrequestresponselogrequest" nillable="true" type="q37:listrequestresponselogrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="listrequestresponselogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q38="EPay.API.Recurring.RequestResponseLog.ListRequestResponseLog.Response" minOccurs="0" name="listrequestresponselogResult" nillable="true" type="q38:listrequestresponselogresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrequestresponselog">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q39="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Request" minOccurs="0" name="getrequestresponselogrequest" nillable="true" type="q39:getrequestresponselogrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrequestresponselogResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q40="EPay.API.Recurring.RequestResponseLog.GetRequestResponseLog.Response" minOccurs="0" name="getrequestresponselogResult" nillable="true" type="q40:getrequestresponselogresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringpaymentstats">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q41="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Request" minOccurs="0" name="getrecurringpaymentstatsrequest" nillable="true" type="q41:getrecurringpaymentstatsrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getrecurringpaymentstatsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q42="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Response" minOccurs="0" name="getrecurringpaymentstatsResult" nillable="true" type="q42:getrecurringpaymentstatsresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getsubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q43="EPay.API.Recurring.Subscriber.GetSubscriber.Request" minOccurs="0" name="getsubscriberrequest" nillable="true" type="q43:getsubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getsubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q44="EPay.API.Recurring.Subscriber.GetSubscriber.Response" minOccurs="0" name="getsubscriberResult" nillable="true" type="q44:getsubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reactivatesuspendedsubscriber">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q45="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Request" minOccurs="0" name="reactivatesuspendedsubscriberrequest" nillable="true" type="q45:reactivatesuspendedsubscriberrequest" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="reactivatesuspendedsubscriberResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q46="EPay.API.Recurring.Subscriber.ReActivateSuspendedSubscriber.Response" minOccurs="0" name="reactivatesuspendedsubscriberResult" nillable="true" type="q46:reactivatesuspendedsubscriberresponse" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

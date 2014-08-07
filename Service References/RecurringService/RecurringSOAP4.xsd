@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPaymentLog.ListRecurringPaymentLog.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+  <xs:complexType name="listrecurringpaymentlogresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="paging" nillable="true" type="q1:paging" />
+          <xs:element minOccurs="0" name="recurringpaymentloglist" nillable="true" type="tns:recurringpaymentloglist" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="listrecurringpaymentlogresponse" nillable="true" type="tns:listrecurringpaymentlogresponse" />
+  <xs:complexType name="recurringpaymentloglist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recurringpaymentlog" nillable="true" type="tns:recurringpaymentlog" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpaymentloglist" nillable="true" type="tns:recurringpaymentloglist" />
+  <xs:complexType name="recurringpaymentlog">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="authorizeresult" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="captureresult" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="created" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="fraud" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="instantcapture" nillable="true" type="xs:int" />
+      <xs:element xmlns:q2="EPay.API.Recurring.RecurringPayment" minOccurs="0" name="paymentstatus" type="q2:paymentstatus" />
+      <xs:element minOccurs="0" name="recurringpaymentid" type="xs:long" />
+      <xs:element minOccurs="0" name="recurringpaymentlogid" type="xs:long" />
+      <xs:element minOccurs="0" name="responsecode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="transactionid" nillable="true" type="xs:long" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpaymentlog" nillable="true" type="tns:recurringpaymentlog" />
+</xs:schema>

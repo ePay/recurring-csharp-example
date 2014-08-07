@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Request" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPayment.UpdateRecurringPayment.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" namespace="EPay.API.Recurring.Request" />
+  <xs:complexType name="updaterecurringpaymentrequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Request" base="q1:request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="updaterecurringpaymentrequest" nillable="true" type="tns:updaterecurringpaymentrequest" />
+  <xs:complexType name="recurringpayment">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="currency" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recurringpaymentid" type="xs:long" />
+      <xs:element minOccurs="0" name="scheduledauth" nillable="true" type="xs:dateTime" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpayment" nillable="true" type="tns:recurringpayment" />
+</xs:schema>

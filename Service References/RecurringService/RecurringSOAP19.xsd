@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.Request" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd4" namespace="EPay.API" />
+  <xs:complexType name="request">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API" base="q1:request">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="request" nillable="true" type="tns:request" />
+  <xs:complexType name="paging">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="pagenumber" type="xs:int" />
+      <xs:element minOccurs="0" name="pagesize" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="paging" nillable="true" type="tns:paging" />
+</xs:schema>

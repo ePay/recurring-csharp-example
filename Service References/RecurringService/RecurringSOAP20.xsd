@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Response" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPayment.GetRecurringPaymentStats.Response" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd7" namespace="EPay.API.Recurring.Response" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd19" namespace="EPay.API.Currency" />
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd27" namespace="EPay.API.Recurring.RecurringPayment" />
+  <xs:complexType name="getrecurringpaymentstatsresponse">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Response" base="q1:response">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="recurringpaymentstatslist" nillable="true" type="tns:recurringpaymentstatslist" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getrecurringpaymentstatsresponse" nillable="true" type="tns:getrecurringpaymentstatsresponse" />
+  <xs:complexType name="recurringpaymentstatslist">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="recurringpaymentstats" nillable="true" type="tns:recurringpaymentstats" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpaymentstatslist" nillable="true" type="tns:recurringpaymentstatslist" />
+  <xs:complexType name="recurringpaymentstats">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="amount" type="xs:int" />
+      <xs:element xmlns:q2="EPay.API.Currency" minOccurs="0" name="currency" nillable="true" type="q2:currency" />
+      <xs:element minOccurs="0" name="fee" type="xs:int" />
+      <xs:element xmlns:q3="EPay.API.Recurring.RecurringPayment" minOccurs="0" name="paymentstatus" type="q3:paymentstatus" />
+      <xs:element minOccurs="0" name="totalamount" type="xs:int" />
+      <xs:element minOccurs="0" name="totalrecurringpayments" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringpaymentstats" nillable="true" type="tns:recurringpaymentstats" />
+</xs:schema>

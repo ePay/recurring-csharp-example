@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.RecurringPlan" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.RecurringPlan" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:complexType name="recurringplan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="addfee" nillable="true" type="xs:boolean" />
+      <xs:element minOccurs="0" name="callbackurlauthcompleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlauthfailed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlcapturecompleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlcardexpired" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlcardwillsoonexpire" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlplanended" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlsubscriptionplansuspended" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="callbackurlsubscriptionsignup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="capturedelayperiod" type="xs:int" />
+      <xs:element minOccurs="0" name="capturedelayperiodtypeid" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="description" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddressauthcompleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddressauthfailed" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddresscapturecompleted" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddresscardexpired" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddresscardwillsoonexpire" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddressplanended" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddresssubscriptionplansuspended" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="emailaddresssubscriptionsignup" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="exactexpirydate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="expireafterperiod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="expireafterperiodtypeid" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="expireafterxpayments" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="paymentwindowtext" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="recurringperiod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="recurringperiodprice" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="recurringperiodtypeid" nillable="true" type="xs:unsignedByte" />
+      <xs:element minOccurs="0" name="trialperiod" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="trialperiodprice" nillable="true" type="xs:int" />
+      <xs:element minOccurs="0" name="trialperiodtypeid" nillable="true" type="xs:unsignedByte" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="recurringplan" nillable="true" type="tns:recurringplan" />
+</xs:schema>

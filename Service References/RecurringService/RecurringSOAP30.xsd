@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Request" elementFormDefault="qualified" targetNamespace="EPay.API.Recurring.SubscriptionPlan.GetSubscriptionPlan.Request" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="https://recurring.api.epay.eu/v1/RecurringSOAP.svc?xsd=xsd3" namespace="EPay.API.Recurring.Request" />
+  <xs:complexType name="getsubscriptionplanrequest">
+    <xs:complexContent mixed="false">
+      <xs:extension xmlns:q1="EPay.API.Recurring.Request" base="q1:request">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="getsubscriptionplanrequest" nillable="true" type="tns:getsubscriptionplanrequest" />
+  <xs:complexType name="subscriptionplan">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="subscriptionplanid" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="subscriptionplan" nillable="true" type="tns:subscriptionplan" />
+</xs:schema>
